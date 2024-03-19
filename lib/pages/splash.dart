@@ -15,7 +15,7 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   void initState() {
-    Timer timer = Timer(
+    Timer(
         const Duration(
           seconds: 4,
         ), () {
@@ -32,13 +32,16 @@ class _SplashState extends State<Splash> {
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset(
-            "assets/images/logo.svg",
+          Center(
+            child: SvgPicture.asset(
+              "assets/images/logo.svg",
+            ),
           ),
           const SizedBox(
             height: 40,
